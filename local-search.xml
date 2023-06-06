@@ -71,9 +71,15 @@
     <link href="/2023/06/01/PCB%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E6%9D%BF/"/>
     <url>/2023/06/01/PCB%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E6%9D%BF/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="整体框架"><a href="#整体框架" class="headerlink" title="整体框架"></a>整体框架</h2><p><img src="1.png"></p><p><img src="2.png"></p><p>总结起来就是如下：</p><p>USB转串口（用于烧录），外部高低速晶振，芯片，复位按键，程序下载控制按键，供电系统</p><p><strong>需要读芯片手册</strong>，里面有关于供电、烧录等的电路推荐，以及相应电子元件参数设置等</p><h3 id="复位"><a href="#复位" class="headerlink" title="复位"></a>复位</h3><p><img src="3.png"></p><p>C7是用来按键消抖的（低电平维持一段时间才复位，这段时间电容在放电），内置上电复位。如果C7用来上电复位，应该用大电容（1/jwC，大电容阻抗小，电容不分压然后才连到GND）。</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>PCB</tag>
+      
+    </tags>
     
   </entry>
   

@@ -16,17 +16,22 @@
   <meta name="author" content="Aba.">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Aba.的个人博客">
+    <meta name="description" content="整体框架  总结起来就是如下： USB转串口（用于烧录），外部高低速晶振，芯片，复位按键，程序下载控制按键，供电系统 需要读芯片手册，里面有关于供电、烧录等的电路推荐，以及相应电子元件参数设置等 复位 C7是用来按键消抖的（低电平维持一段时间才复位，这段时间电容在放电），内置上电复位。如果C7用来上电复位，应该用大电容（1&#x2F;jwC，大电容阻抗小，电容不分压然后才连到GND）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PCB最小系统板">
 <meta property="og:url" content="http://example.com/2023/06/01/PCB%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E6%9D%BF/index.html">
 <meta property="og:site_name" content="Aba.的欢乐谷">
-<meta property="og:description" content="Aba.的个人博客">
+<meta property="og:description" content="整体框架  总结起来就是如下： USB转串口（用于烧录），外部高低速晶振，芯片，复位按键，程序下载控制按键，供电系统 需要读芯片手册，里面有关于供电、烧录等的电路推荐，以及相应电子元件参数设置等 复位 C7是用来按键消抖的（低电平维持一段时间才复位，这段时间电容在放电），内置上电复位。如果C7用来上电复位，应该用大电容（1&#x2F;jwC，大电容阻抗小，电容不分压然后才连到GND）。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/06/01/PCB%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E6%9D%BF/1.png">
+<meta property="og:image" content="http://example.com/2023/06/01/PCB%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E6%9D%BF/2.png">
+<meta property="og:image" content="http://example.com/2023/06/01/PCB%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E6%9D%BF/3.png">
 <meta property="article:published_time" content="2023-06-01T06:34:06.000Z">
-<meta property="article:modified_time" content="2023-06-01T06:34:06.298Z">
+<meta property="article:modified_time" content="2023-06-06T07:24:07.798Z">
 <meta property="article:author" content="Aba.">
+<meta property="article:tag" content="PCB">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2023/06/01/PCB%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E6%9D%BF/1.png">
   
   
   
@@ -236,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          183 字
         
       </span>
     
@@ -247,7 +252,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -298,7 +303,14 @@
             
               <div class="markdown-body">
                 
-                
+                <h2 id="整体框架"><a href="#整体框架" class="headerlink" title="整体框架"></a>整体框架</h2><p><img src="1.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="2.png" srcset="/img/loading.gif" lazyload></p>
+<p>总结起来就是如下：</p>
+<p>USB转串口（用于烧录），外部高低速晶振，芯片，复位按键，程序下载控制按键，供电系统</p>
+<p><strong>需要读芯片手册</strong>，里面有关于供电、烧录等的电路推荐，以及相应电子元件参数设置等</p>
+<h3 id="复位"><a href="#复位" class="headerlink" title="复位"></a>复位</h3><p><img src="3.png" srcset="/img/loading.gif" lazyload></p>
+<p>C7是用来按键消抖的（低电平维持一段时间才复位，这段时间电容在放电），内置上电复位。如果C7用来上电复位，应该用大电容（1/jwC，大电容阻抗小，电容不分压然后才连到GND）。</p>
+
                 
               </div>
             
@@ -306,6 +318,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/PCB/">#PCB</a>
+      
+    </div>
   
 </div>
 
