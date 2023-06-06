@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Hexo个人博客建立</title>
+    <link href="/2023/06/06/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B/"/>
+    <url>/2023/06/06/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/web18296061989/article/details/123442046">(61条消息) GitHub Pages + Hexo搭建个人博客网站，史上最全教程_github pages部署hero_普通网友的博客-CSDN博客</a></p><p>参考上面的文章，基本功能就有了</p><p>我仅说明一些需要修改的地方：</p><ol><li>评论功能和访问浏览功能无效？</li></ol><p>在配置lencloud时，国内则需要加上server_url，也就是lencloud提供的reset api地址，但是一定要像我一样加上单引号，<strong>否则识别不到</strong>！！！</p><p>后面还有评论功能，那个地方我没有设置server_url但也成功了。建议都加上哈哈！</p><p><img src="https://gitee.com/Jessica-lol/imags/raw/master/img/image-20230606150506282.png" alt="image-20230606150506282"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>串口(matlab，arduino)</title>
     <link href="/2023/06/06/%E4%B8%B2%E5%8F%A3-matlab%EF%BC%8Carduino/"/>
     <url>/2023/06/06/%E4%B8%B2%E5%8F%A3-matlab%EF%BC%8Carduino/</url>
