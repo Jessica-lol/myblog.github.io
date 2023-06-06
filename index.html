@@ -417,7 +417,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/06/01/STM32%E4%B8%B2%E5%8F%A3%E5%A4%A7%E6%B3%95/" target="_self">
         <div>
-          不定长接收myusart.c&#x1f517;myusart.h&#x1f517;
+          不定长接收第一种方式myusart.c&#x1f517;myusart.h&#x1f517; CubeMx里打开DMA的RX就行，只要求串口中断打开，DMA中断无所谓  PS:这里要把串口中断打开（空闲中断需要用到串口中断），把相应的DMA中断关闭（因为对于不定长数据，DMA中断判别不了到底要接收几个字节的数据才中断，而串口可以），否则容易引起异常。（如果是定长的数据的话，可以关闭串口中断，直接开
         </div>
       </a>
 
