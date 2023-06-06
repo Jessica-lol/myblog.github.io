@@ -9,9 +9,9 @@
                                      0xffff)
 
 #define buf_length 1024
-extern uint8_t tx_buf[1024]; //·¢ËÍ»º´æÇø
+extern uint8_t tx_buf[1024]; //å‘é€ç¼“å­˜åŒº
 
-extern uint8_t rx_buf[buf_length]; //½ÓÊÕ»º´æÇø
+extern uint8_t rx_buf[buf_length]; //æ¥æ”¶ç¼“å­˜åŒº
 
 extern void usart_init(void);
 

@@ -3,24 +3,24 @@
 
 extern int rx_flag;
 extern uint16_t rx_length;
-uint8_t rx_buf[buf_length];//¶¨ÒåµÄ´®¿Ú½ÓÊÕ»º´æÇø
-uint8_t tx_buf[1024];//¶¨ÒåµÄ´®¿Ú·¢ËÍ»º´æÇø
+uint8_t rx_buf[buf_length];//å®šä¹‰çš„ä¸²å£æ¥æ”¶ç¼“å­˜åŒº
+uint8_t tx_buf[1024];//å®šä¹‰çš„ä¸²å£å‘é€ç¼“å­˜åŒº
 
-void USART1_IRQHandler(void)//´®¿Ú¿ÕÏĞidleÖĞ¶Ï
+void USART1_IRQHandler(void)//ä¸²å£ç©ºé—²idleä¸­æ–­
 {
 	if(__HAL_UART_GET_FLAG(&huart1,UART_FLAG_IDLE) != RESET)
 	{
-		__HAL_UART_CLEAR_IDLEFLAG(&huart1);	//Çå³ıÖĞ¶Ï±êÖ¾Î»										
-		HAL_UART_DMAStop(&huart1);//Í£Ö¹DMA½ÓÊÕ
+		__HAL_UART_CLEAR_IDLEFLAG(&huart1);	//æ¸…é™¤ä¸­æ–­æ ‡å¿—ä½										
+		HAL_UART_DMAStop(&huart1);//åœæ­¢DMAæ¥æ”¶
 		
-		rx_length = buf_length - hdma_usart1_rx.Instance->NDTR;//¼ÆËã³¤¶È
-		rx_flag = 1;//±íÊ¾½ÓÊÜµ½ÁË
+		rx_length = buf_length - hdma_usart1_rx.Instance->NDTR;//è®¡ç®—é•¿åº¦
+		rx_flag = 1;//è¡¨ç¤ºæ¥å—åˆ°äº†
 	}
 	
 }
 
 void usart_init(void)
 {
-	__HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);//IDLEÖĞ¶ÏÊ¹ÄÜ
-	HAL_UART_Receive_DMA(&huart1, rx_buf, buf_length);//Ê¹ÄÜDMA½ÓÊÕ
+	__HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);//IDLEä¸­æ–­ä½¿èƒ½
+	HAL_UART_Receive_DMA(&huart1, rx_buf, buf_length);//ä½¿èƒ½DMAæ¥æ”¶
 }
